@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Brought by</th>
+                            <th>Date Brought</th>
+                            <th>Expiry Date</th>
+
+                        </tr>
+                    </thead>
+
+                        {% for items in items %}
+                        <tr>
+                    <td>{{ items['item']}}</td>
+                    <td>{{ items['user_id'] }}</td>
+                    <td>{{ items['time_brought'] }}</td>
+                    <td>{{ items['expiry_date'] }}</td>
+
+                        </tr>
+
+
+                        {% endfor %}
+                    </table>
+{% endblock %}

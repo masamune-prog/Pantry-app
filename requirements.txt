@@ -1,0 +1,10 @@
+cs50
+Flask
+Flask-Session
+flask_mail
+datetime
+requests
+gunicorn
+Jinja2
+Werkzeug
+psycopg2

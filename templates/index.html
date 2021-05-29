@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Console
+{% endblock %}
+<script>
+    let old_date = Document.getElementById('date');
+    const date  = new Date(old_date);
+    let now = new Date();
+    if (date>=now)
+    {
+        old_date.style.color = 'Red';
+
+
+    }
+
+</script>
+
+{% block main %}
+<table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Brought by</th>
+                            <th>Date Brought</th>
+                            <th>Expiry Date</th>
+                            <th>Ate?</th>
+                        </tr>
+                    </thead>
+
+                        {% for items in items %}
+                        <tr>
+                    <td>{{ items['item']}}</td>
+                    <td>{{ items['user_id'] }}</td>
+                    <td>{{ items['time'] }}</td>
+                    <td id = date>{{ items['expiry_date'] }}</td>
+                    <td><form class="inline-form" method="post" action="{{ url_for('delete') }}" >
+                <input type=hidden value="{{ items['item_id'] }}"name=item_to_delete />
+                  <input type=submit value = 'Ate?'/>
+            </form>
+
+                    </td>
+
+                        </tr>
+
+
+                        {% endfor %}
+
+
+                </table>
+{% endblock %}

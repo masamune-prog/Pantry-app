@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Brought
+{% endblock %}
+
+{% block main %}
+    <form action="/brought" method="post">
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="item" placeholder="Item Brought" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="quantity" placeholder="Quantity" type="number">
+        </div>
+        <div class="form-group">
+            <label>Expiry Date:</label>
+            <input class="form-group" type="date" id="expiry" name="expiry">
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+{% endblock %}
