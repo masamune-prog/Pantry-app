@@ -46,7 +46,6 @@ Users can observe what they have purchased before
 ## Future improvements:
 - Transition to a mobile app
 - Use celery to automate expiry date notification to users
-- Migration to postgresdb
 
 ## Main logic of the app:
 Application.py has 10 routes:
@@ -100,7 +99,7 @@ Allows user to enter their verification code and new password
 ## Add:
 Adds new members in family by updating the users table by SQL
 
-
+App is live at : https://food-stocks.herokuapp.com/
 
 
 
