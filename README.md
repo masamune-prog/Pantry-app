@@ -99,7 +99,7 @@ Allows user to enter their verification code and new password
 ## Add:
 Adds new members in family by updating the users table by SQL
 
-##Live Demo
+## Live Demo:
 App is live at : https://food-stocks.herokuapp.com/
 
 
